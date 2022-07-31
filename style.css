@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    color: #fff;
+    background-color: #2a2a72;
+    font-family: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,4 +15,104 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
+}
+
+.user-form input {
+    color: #fff;
+    width: 100%;
+    display: block;
+    background-color: #4c2885;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.user-form input:focus {
+    outline: none;
+}
+
+.user-form input::placeholder {
+    color: #bbb;
+}
+
+.card {
+    max-width: 800px;
+    background-color: #4c2885;
+    display: flex;
+    padding: 3rem;
+    margin: 0 1.5rem;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border: 10px solid #2a2a72;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.user-info {
+    color: #eee;
+    margin-left: 2rem;
+}
+
+.user-info h2 {
+    margin-top: 0;
+}
+
+.user-info ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 400px;
+}
+
+.user-info ul li {
+    display: flex;
+    align-items: center;
+}
+
+.user-info ul li strong {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.repo {
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    font-size: 0.7rem;
+    background-color: #212a72;
+    text-decoration: none;
+}
+
+@media (max-width: 500px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-form {
+        max-width: 400px;
+    }
 }
